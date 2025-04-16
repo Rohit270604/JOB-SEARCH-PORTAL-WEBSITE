@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HUSTLE-HIRE - Search Jobs</title>
+        <link rel="stylesheet" href="../style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <body>
+
+        <!-- Header  Section-->
+         <header>
+            <div id="navbar" class="obj-width">
+                <a href="../index.html"><img class="logo" src="../ChatGPT_Image .png" alt=""></a>
+                <ul id="menu" class="active">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../JOBS/job.html">Browse Jobs</a></li>
+                    <li><a href="">Contact</a></li>
+                    <button id="navbar-btn">Join</button>
+                </ul>
+                <i id="bar" class='bx bx-menu'></i>
+            </div>
+         </header>
+
+       <!-- Job Details Section  -->
+        <div id="job-details" class="extra-space obj-width"> 
+           
+        </div>
+
+        <!-- Footer  Section-->
+         <footer class="footer">
+            <div class="obj-width">
+                <div class="footer-top">
+                <div>
+                    <img class="footer-logo" src="../HustleHire_text_only22.png" alt="">
+                    <p id="f-t-para">Search your desired jobs.</p>
+                </div>
+                
+                 <div>
+                    <a href="https://www.facebook.com/share/1939HiUtck/" target="_main"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=kdcs08g" target="_main"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://www.linkedin.com/in/rohitsinghghughtyal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_main"><i class='bx bxl-linkedin-square' ></i></a>
+                    <a href="https://www.youtube.com/@RoHiTSiNgH0002" target="_main"><i class='bx bxl-youtube' ></i></a>
+                 </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    <h3>Project</h3>
+                    <a href="#">Changelog</a>
+                    <a href="#">Status</a>
+                    <a href="#">Licence</a>
+                    <a href="#">All Versions</a>
+                </div>
+
+                <div>
+                    <h3>Community</h3>
+                    <a href="#">Github</a>
+                    <a href="#">Issues</a>
+                    <a href="#">Project</a>
+                    <a href="#">Twitter</a>
+                </div>
+
+                <div>
+                    <h3>Help</h3>
+                    <a href="#">TroubleShooting</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact us</a>
+                </div>
+
+                <div>
+                    <h3>Others</h3>
+                    <a href="#">Terms Of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Licence</a>
+                </div>
+            </div>
+        </div>
+         </footer>
+
+         <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const urlParam = new URLSearchParams(window.location.search);
+                const index = urlParam.get("id");
+                const selectJob = jCategory[index];
+            
+                const jobDetailContainer = document.querySelector("#job-details");
+            
+                jobDetailContainer.innerHTML = ` 
+                    <div class="job-details-header">
+                        <div class="job-img-row">
+                            <img src="${selectJob.image}" alt="">
+                            <div>
+                                <h2>${selectJob.companyName}</h2>
+                                <span>${selectJob.location}</span>
+                            </div>
+                        </div>
+                        <a id="search-btn" href="#">Apply Now</a>
+                    </div>
+            
+                    <div class="features obj-width">
+                        <div class="job-details-features-box">
+                            <div class="features-box">
+                                <img src="../images/vacancy.png" alt="">
+                                <h3>Vacancy</h3>
+                                <p>${selectJob.vacancy}</p>
+                            </div>
+                            <div class="features-box">
+                                <img src="../images/features_2.png" alt="">
+                                <h3>Position</h3>
+                                <p>${selectJob.title}</p>
+                            </div>
+                            <div class="features-box">
+                                <img src="../images/hour.png" alt="">
+                                <h3>Hours</h3>
+                                <p>${selectJob.hours}</p>
+                            </div>
+                            <div class="features-box">
+                                <img src="../images/salary.png" alt="">
+                                <h3>Salary</h3>
+                                <p>${selectJob.rate}</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="job-description sec-space">
+                        <h3>Job Description</h3>
+                        <p>${selectJob.description}</p>
+            
+                        <h3>Employment Status</h3>
+                        <p>${selectJob.av}</p>
+            
+                        <h3>Workplace</h3>
+                        <p>${selectJob.workPlace}</p>
+            
+                        <h3>Required Qualifications</h3>
+                        <p>${selectJob.qualification}</p>
+            
+                        <h3>Experience Requirements</h3>
+                        <p>${selectJob.experience}</p>
+                    </div>
+                `;
+            });
+            </script>
+            
+
+
+        <script src="../toggle.js"></script>
+        <script src="job-list.js"></script>
+        <script src="jobSearch.js"></script>
+    </body>
+
+</html>
