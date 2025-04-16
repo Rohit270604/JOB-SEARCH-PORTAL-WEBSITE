@@ -1,4 +1,4 @@
-# HustleHire-Job-Portal-Website-By-RohitSingh
+# HustleHire-Job-Search-Website-By-RohitSingh
 
 Welcome to HustleHire, a job portal website project aimed at helping job seekers and employers connect efficiently. This repository contains all the necessary files and resources to build and deploy the HustleHire website.
 
